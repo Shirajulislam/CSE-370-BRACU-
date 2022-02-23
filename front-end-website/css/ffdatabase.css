@@ -1,0 +1,153 @@
+/** ===============================================================
+ * 	Main CSS file for jackieplank.com
+ *  @author Eric Davis - 2016
+ *
+ * SWATCH COLORS
+ * =============
+ * Dark Red - #910900
+ * Light Red - #E56D64
+ *
+ * CONTENTS
+ * =============
+ * I. 	  Body, Header, & Footer - Stylings for page layout elements
+ * II.	  Sidebar & Nav - Stylings for the Sidebar/Navigation bar
+ * III.   Content - Stylings for various main content across the different pages
+ * IV.	  Homepage - Stylings specific to the homepage
+ * V.	  Custom Generic - Custom generic stylings for any element
+ * VI.    Bootstrap Overrides - Style overrides for the Bootstrap classes
+ * VII.   Tables & Charts - Stylings for the charts and tables
+ *
+ =================================================================== */
+
+/* ============================================================
+ * ==  I. Body, Header & Footer		===========================
+ * ============================================================ */
+
+/* ======== Jumbotron ======== */
+.jumbotron {
+	background-color: #ededed;
+	font-family: Audiowide;
+	padding-left: 2%;
+}
+p.jumbotron {
+	font-size: 50%;
+}
+/* Jumbotron site tagline */
+.small-tagline {
+	font-size: 0.6em;
+}
+h1.jumbotron-text {
+	color: #5E0700;
+	font-family: Audiowide;
+	font-size: 320%;
+}
+
+/* ============================================================
+ * ==  II. Sidebar & Nav		===============================
+ * ============================================================ */
+
+/* ======== Button to show/hide nav sidebar ========*/
+#menu-toggle {
+	background-color: #910900;
+	color: white;
+	font-size: 120%;
+	font-weight: 600;
+}
+
+/* ======== Sidebar Nav ======== */
+.sidebar-nav > .active, li.active {
+	background-color: #910900;
+	color: white;
+}
+.sidebar-nav > .active a {
+	color: white;
+}
+a.active {
+	color: white !important;
+}
+.sidebar-nav li a:hover {
+	background-color: #E56D64;
+}
+
+
+/* ============================================================
+ * ==  III. Content		=======================================
+ * ============================================================ */
+
+/* Visualization buttons above output tables */
+.viz-buttons {
+	margin-bottom: 1%;
+}
+
+
+/* ============================================================
+ * ==  IV. Homepage		=======================================
+ * ============================================================ */
+
+/* Icons in the Homepage Containers */
+img.container-icon {
+	height: 75px;
+}
+
+
+/* ============================================================
+ * ==  V. Custom Generic		===============================
+ * ============================================================ */
+
+/* ======== Backgrounds ======== */
+.bg-red {
+	background-color: #910900;
+	color: white;
+}
+
+/* ======== Fonts ======== */
+.audiowide-font {
+	font-family: Audiowide;
+}
+.orbitron-font {
+	font-family: Orbitron;
+}
+.arial-font {
+	font-family: Arial;
+}
+.consolas-font {
+	font-family: Consolas;
+}
+
+/* ======== Alignment & Float ======== */
+.center {
+	text-align: center;
+}
+
+/* ======== Colors ======== 
+.green {
+	background-color: #006F13;
+	color: white;
+}
+*/
+
+
+/* ============================================================
+ * ==  VI. Bootstrap Overrides		===========================
+ * ============================================================ */
+
+.panel {
+	border-color: #910900;
+}
+
+.panel-heading {
+	background-color: #910900 !important;
+	border-color: #910900 !important;
+	color: white !important;
+}
+
+
+/* ============================================================
+ * ==  VII. Tables & Charts		===============================
+ * ============================================================ */
+
+/* ======== Tables ======== */
+/* Remove linebreaks in long columns */
+td {
+	white-space: nowrap;
+}

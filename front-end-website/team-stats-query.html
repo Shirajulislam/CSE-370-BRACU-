@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Fantasy Football Database</title>
+
+		<!-- STYLES -->
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Audiowide|Dosis|Orbitron|Prompt" rel="stylesheet">
+		<!-- Bootstrap 3.3.7 Core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- Simple-Sidebar and Readable Theme CSS -->
+		<link href="css/simple-sidebar.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/readable-bootstrap.css">
+		<!--  Custom CSS -->
+		<link rel="stylesheet" href="css/ffdatabase.css">
+
+		<!-- SCRIPTS -->
+		<!-- jQuery 3.1.1 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Bootstrap 3.3.7 -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- Sorttable Snippet -->
+		<script type="text/javascript" src="js/sorttable.js"></script>
+		<!-- Custom JavaScript -->
+		<script type="text/javascript" src="js/ffdatabase.js"></script>
+		
+		<script type="text/javascript" src="js/team-stats-query.js"></script>
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<!-- Entire content wrapper -->
+		<div id="wrapper">
+
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav nav nav-stacked audiowide-font">
+					<li class="sidebar-brand"><a href="index.html">Fantasy Database</a></li>
+					<li><a href="index.html#tools">Query Tools</a>
+						<ul><li class="active"><a class="active" href="game-query.html">Game Info</a></li>
+							<li><a>Team Stats</a></li>
+							<li><a>Player Stats</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Schema</a></li>
+					<li><a href="#">Custom Query</a></li>
+					<li><a href="#">Analysis</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div> <!-- End sidebar-wrapper -->
+			
+
+			<!-- Page Content Wrapper(place all content within page-content wapper) -->
+			<div id="page-content-wrapper">
+				<!-- Page content header - jumbotron -->
+				<div class="col-lg-12 jumbotron">
+					<h1 class="jumbotron-text">Team Stats Query</h1>
+					<p class="consolas-font">Add a short description! </p>
+					<p class="consolas-font">A couple form elements have been added for demonstration and convenience!<br />Add new rows to the form for more elements.</p>
+					<a href="#menu-toggle" class="btn bg-red audiowide-font" id="menu-toggle">&lt;&lt;</a>
+				</div>
+				
+				<!-- Page content body -->
+				<div class="container-fluid">
+
+					<!-- Body Row 1 - (The Form)-->
+					<div class="row">
+						<div class="col-lg-12" id="form-div">
+							<form id="game-form">
+								<fieldset>
+									<legend class="audiowide-font">Filters</legend>
+									
+									<!-- Form Row 1 -->
+									<div class="row">
+										<!-- Team selection box -->
+										<div class="form-group col-lg-3">
+											<label for="select-team" class="control-label">Team</label>
+											<select multiple="" id="select-team" name="select-team" class="form-control" size="5">
+												<option value="%">Select ALL</option><option value="Cardinals">Arizona Cardinals</option>
+												<option value="Falcons">Atlanta Falcons</option><option value="Ravens">Baltimore Ravens</option><option value="Bills">Buffalo Bills</option><option value="Panthers">Carolina Panthers</option>
+												<option value="Bears">Chicago Bears</option><option value="Bengals">Cincinnati Bengals</option><option value="Browns">Cleveland Browns</option><option value="Cowboys">Dallas Cowboys</option>
+												<option value="Broncos">Denver Broncos</option><option value="Lions">Detroit Lions</option><option value="Packers">Green Bay Packers</option><option value="Texans">Houston Texans</option>
+												<option value="Colts">Indianapolis Colts</option><option value="Jaguars">Jacksonville Jaguars</option><option value="Chiefs">Kansas City Chiefs</option><option value="Rams">Los Angeles Rams</option>
+												<option value="Dolphins">Miami Dolphins</option><option value="Vikings">Minnesota Vikings</option><option value="Patriots">New England Patriots</option><option value="Saints">New Orleans Saints</option>
+												<option value="Giants">New York Giants</option><option value="Jets">New York Jets</option><option value="Raiders">Oakland Raiders</option><option value="Eagles">Philadelphia Eagles</option>
+												<option value="Steelers">Pittsburgh Steelers</option><option value="Chargers">San Diego Chargers</option><option value="49ers">San Francisco 49ers</option><option value="Seahawks">Seattle Seahawks</option>
+												<option value="Buccaneers">Tampa Bay Buccaneers</option><option value="Titans">Tennessee Titans</option><option value="Redskins">Washington Redskins</option>
+											</select>
+										</div>
+
+										<!-- Week Select Boxes -->
+										<div class="form-group col-lg-3 col-xs-6">
+											<label for="start-year" class="control-label">Start Year</label>
+											<select id="start-year" name="start-year" class="form-control">
+												<option value="allYears">All</option>
+												<option value="2016">2016</option>
+												<option value="2015">2015</option>
+												<option value="2014">2014</option>
+												<option value="2013">2013</option>
+												<option value="2012">2012</option>
+												<option value="2011">2011</option>
+												<option value="2010">2010</option>
+												<option value="2009">2009</option>
+												<option value="2008">2008</option>
+												<option value="2007">2007</option>
+												<option value="2006">2006</option>
+												<option value="2005">2005</option>
+											</select>
+											<label for="end-year" class="control-label">End Year</label>
+											<select id="end-year" name="end-year" class="form-control disable-on-clear" disabled>
+												<!-- Options created in JavaScript function weekChange() -->
+											</select>
+										</div>
+
+										<div class="form-group col-lg-3 col-xs-6">
+											<label for="start-week" class="control-label">Start Week</label>
+											<select id="start-week" name="start-week" class="form-control">
+												<option value="0">All</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">Wildcard</option>
+												<option value="19">Divison Playoff</option>
+												<option value="20">Conf. Champ</option>
+												<option value="21">Super Bowl</option>
+											</select>
+											<label for="end-week" class="control-label">End Week</label>
+											<select id="end-week" name="end-week" class="form-control disable-on-clear" disabled>
+												<!-- Options created in JavaScript function weekChange() -->
+											</select>
+										</div>
+
+										<!-- Indoor/Outdoor Radio Buttons -->
+										<div class="form-group col-lg-3 col-xs-6">
+											<label class="control-label">Indoor/Outdoor</label>
+											<div class="radio">
+												<label>
+													<input type="radio" id="roof-radio-both" name="roof-radios" value="%" checked />
+													All Games </label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" id="roof-radio-y" name="roof-radios" value="Y" />
+													Indoor Only </label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" id="roof-radio-n" name="roof-radios" value="N" />
+													Outdoor Only </label>
+											</div>
+										</div>
+									</div> <!-- End Form Row 1 -->
+
+
+									<!-- Form Row 2 -->
+									<div class="row">
+										<!-- Insert more elements or delete this row! -->
+									</div> <!-- End Form row 2 -->
+
+
+									<!-- Form Row 3 - Submit Button -->
+									<div class="row">
+										<input type="button" id="submit-button" name="submit-button" class="btn btn-success col-lg-3 audiowide-font" value="Run Query" />
+										<input type="button" id="clear-button" name="clear-button" class="btn btn-danger col-lg-3 col-lg-offset-1 audiowide-font" value="Clear All" />
+									</div>
+								</fieldset>
+							</form>
+						</div> <!-- End Form Div -->
+					</div> <!-- End Body Row 1 -->
+
+
+					<hr size="2" />
+					
+					
+					<!-- Body Row 2 - (The Table)-->
+					<div class="row">
+						<div class="col-lg-12 panel panel-default" style="max-height:2000px; overflow-y: scroll; ">
+							<div class="panel-heading">
+								<h3 class="panel-title audiowide-font">Query Results</h3>
+							</div>
+							<div class="panel-body">
+								<input type="button" class="btn btn-danger viz-buttons" id="spread-covered-button" value="Spread Visualization" disabled />
+								<input type="button" class="btn btn-danger viz-buttons" id="ou-button" value="Over/Under Visualization" disabled />
+								<input type="button" class="btn btn-danger viz-buttons add-tooltip" id="wl-button" value="Won/Lost Visualization" data-placement="left" data-original-title="Won/Lost Visual only available when 1 team selected" disabled />
+								<div class="col-lg-12" id="output-div"></div>
+							</div>
+						</div>
+					</div> <!-- End Body Row 2 -->
+
+
+					<!-- ========== BEGIN MODALS ========== -->
+					
+					<!-- Example Modal to display charts -->
+					<div class="modal" id="spread-covered-modal">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-body">
+									
+									
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- End modal -->
+
+				</div> <!-- End page body content -->
+			</div> <!-- End page content wrapper -->		
+		</div> <!-- End entire content wrapper -->
+		
+
+		<!-- Menu Toggle Script -->
+		<script>
+			$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
+		</script>
+	</body>
+</html>
