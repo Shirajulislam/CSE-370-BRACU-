@@ -1,0 +1,156 @@
+/** ===============================================================
+ * 	Main CSS file for jackieplank.com
+ *  @author Eric Davis - 2016
+ * 
+ * SWATCH COLORS
+ * =============
+ * Green Rank - 00ba31
+ * Yellow Rank - ffdf02
+ * Orange Rank - ff6c0a
+ * Red Rank - dc030d
+ * Blue - 337ab7
+ * 
+ * 
+ * CONTENTS
+ * =============
+ * I. 	Body - Stylings for the page body
+ * II.	Header & Nav - Stylings for the Header & NavBar
+ * III. Content - Stylings for the page main content
+ * IV.	Homepage - Stylings specific to the homepage
+ * V.	Generic - Generic stylings for any element
+ * 
+ =================================================================== */
+
+
+/* =============================================
+ * ==  I. Body		============================
+ * ============================================= */
+#page-wrapper
+{
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+}
+
+/* =============================================
+ * ==  II. Header & Nav		====================
+ * ============================================= */
+
+.navbar, .side-nav 
+{
+	background-color: #f8f8f8;
+	/* border-color: #e7e7e7; */
+	border: 2px solid #e7e7e7;
+}
+.side-nav a, .side-nav li 
+{
+	color: #337ab7 !important;
+}
+.navbar .active a 
+{
+	background-color: #e7e7e7 !important;
+}
+
+/* Nav-bar Team Dashboard Links */
+.team-link
+{
+	background: none;
+	border: none;
+	text-align: left;
+	width: 100%;
+}
+.navbar tr:hover
+{
+	background-color: #e7e7e7;
+}
+
+/* Table of team name links in sidebar nav - REMOVE ??????????? */
+#team-table a
+{
+	background-color: rgba(0,0,0,0) !important;
+}
+
+/* =============================================
+ * ==  III. Content		========================
+ * ============================================= */
+
+/* Dashboard Stylings */
+
+.ranking-label 
+{
+	font-size: 150%;
+}
+.ranking-value 
+{
+	font-size: 350%;
+	font-weight: 600;
+	text-align: center;
+}
+
+.team-record
+{
+	margin-left: 3px;
+	margin-top: -7px;
+}
+
+/* Ranking Colors */
+.rank-color-green
+{
+	color: #00ba31;
+}
+.rank-color-orange
+{
+	color: #ff6c0a;
+}
+.rank-color-red
+{
+	color: #dc030d;
+}
+.rank-color-yellow
+{
+	color: #ffdf02;
+}
+
+
+/* =============================================
+ * ==  IV. Homepage		========================
+ * ============================================= */
+
+
+
+/* =============================================
+ * ==  V. Generic		========================
+ * ============================================= */
+
+/* Padding & Alignment  */
+.pad-bottom-10 
+{
+	padding-bottom: 10px;
+}
+.pad-left 
+{
+	padding-left: 10px;
+}
+.v-margin-15 
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* Borders & Backgrounds */
+.border-right 
+{
+	border-right: 2px solid #c6c6c6;
+	line-height: 10px;
+}
+
+/* Tables & Panels  */
+.table-stripes tr:nth-child(odd) 
+{
+	background-color: #ffffff;
+}
+
+
+#bar-test
+{
+	height: 300px;
+}
